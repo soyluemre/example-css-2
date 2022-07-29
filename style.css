@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Ubuntu:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jua', sans-serif;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url(1.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+    border-radius: 70%;
+}
+
+.logo:hover{
+    background-color: #21ffe9;
+    transition: all 7s;
+}
+
+.navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar ul li:after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s ;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.navbar ul li a:hover{
+    color: #21ffe9;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-family: 'Kalam', cursive;
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 20px auto;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button{
+    font-family: 'Ubuntu', sans-serif;
+    width: 165px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover{
+    border: none;
+    box-shadow: 2px 3px 5px #21ffe9;
+    letter-spacing: 5px;
+    transition: all 2s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 1s;
+}
+
+
+@media (max-width:780px){
+    .navbar ul li{
+        display: none;
+    }
+
+    .content h1{
+        font-size: 35px
+    }
+
+    .content p  {
+        font-size: 20px
+    }
+
+    .logo{
+        margin: auto;
+        overflow: auto;
+    }
+
+    .logo::after{
+        content: "";
+        display: table;
+        clear: both;
+        
+    }
+
+    
+}
